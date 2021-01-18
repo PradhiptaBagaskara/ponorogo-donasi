@@ -8,13 +8,26 @@ class Home extends CI_Controller {
 
         $this->load->model(['MdlDonasi', 'MdlSorting', 'MdlSettings']);
         $this->settings = $this->MdlSettings;
+        $this->go_hell();
+
     }
 
 
-    // public function test()
-    // {
-    //     var_dump($this->MdlSettings->getBank()->result_array());
-    // }
+    private function go_hell()
+    {
+        $header = $this->input->request_headers();
+        if (array_key_exists("X-Requested-With", $header)) {
+            if ($header['X-Requested-With'] != "com.inatama.ponorogoaksi") {
+                redirect(base_url('/admin'));
+            }
+        }else{
+            redirect(base_url('/admin'));
+
+        }
+
+    }
+
+
 
     public function sorting() {
         

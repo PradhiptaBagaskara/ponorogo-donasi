@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header_menu'); ?>
 
 <!--main-->
 
@@ -21,24 +21,60 @@
            <h1 class="elip font-bold" style="margin-bottom: 30px"><?php echo $row->nama_donasi; ?></h1>
            
         <div class="col-md-6" style="padding: 50px">
-        
         <div class="row">
-           <div class="col-md-11 text-left">
-           <img src="<?php echo base_url('assets/'.$row->img1); ?>" height="80%" width="110%"/>
-           <img src="<?php echo base_url('assets/'.$row->img2); ?>" height="80%" width="110%"/>
-           <img src="<?php echo base_url('assets/'.$row->img3); ?>" height="80%" width="110%"/>
-           <img src="<?php echo base_url('assets/'.$row->img4); ?>" height="80%" width="110%"/>
-           <img src="<?php echo base_url('assets/'.$row->img5); ?>" height="80%" width="110%"/>
-           </div>
-          </div>
+  <div class="col-md-12 text-left">    
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+       <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <!-- <li data-target="#carousel-example-generic" data-slide-to="3"></li> -->
+        <!-- <li data-target="#carousel-example-generic" data-slide-to="4"></li> -->
+				<li data-target="#carousel-example-generic" data-slide-to="3"></li>
+       </ol>
+		<div id="row bg-img" id="rentyour">
+					<div class="carousel-inner">
+						<div class="item active">
+                       <img src="<?php echo base_url('assets/'.$row->img1); ?>" height="80%" width="110%"/>
+					</div>
+					<div class="item">
+                       <img src="<?php echo base_url('assets/'.$row->img2); ?>" height="80%" width="110%"/>
+					</div>
+					<div class="item">
+                       <img src="<?php echo base_url('assets/'.$row->img3); ?>" height="80%" width="110%"/>
+					</div>
+					<div class="item">
+                       <img src="<?php echo base_url('assets/'.$row->img4); ?>" height="80%" width="110%"/>
+					</div>
+				
+				</div>
+			</div>
 		</div>
+	</div>
+</div>
+        
+
       
         <div class="thumbnail col-md-6">
         <!-- <h3 class="eclip text-left mt-inner" >Kategori : <?php echo $row->kategori_donasi; ?></h3> -->
-        <h3 class="eclip text-left mt-inner" >Tercapai &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: <b><?php echo 'Rp '.nominal($row->perolehan_donasi); ?></b></h3>
-        <h3 class="eclip text-left mt-inner" >Target   &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: <?php echo 'Rp '.nominal($row->target_donasi); ?></h3>
-        <h3 class="eclip text-left mt-inner" >Berakhir Tgl &nbsp: <?php echo tgl_indo($row->masa_donasi); ?></h3>
-        <h3 class="eclip text-left mt-inner" >Sisa Hari &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp: <?php echo $row->masa_aktif; ?> Hari</h3>
+        <table class="table">
+                <tr class="eclip text-left mt-inner">
+                <td>Tercapai</td>
+                <td>      <b><?php echo 'Rp '.nominal($row->perolehan_donasi); ?></b>    </td>
+                </tr>
+                <tr class="eclip text-left mt-inner">
+                <td>Target</td>
+                <td>      <b><?php echo 'Rp '.nominal($row->target_donasi); ?></b>    </td>
+                </tr>
+                <tr class="eclip text-left mt-inner">
+                <td>Berakhir Tgl</td>
+                <td>      <b><?php echo tgl_indo($row->masa_donasi); ?></b>    </td>
+                </tr>
+                <tr class="eclip text-left mt-inner">
+                <td>Sisa Hari</td>
+                <td>      <b><?php echo  $row->masa_aktif; ?></b>    </td>
+                </tr>
+        </table>
         <a href="<?php echo base_url('/Donatur/register/'.$row->id_donasi); ?>" class="btn btn-success btn-lg btn-block" role="button">Donasi Sekarang</a>
         </div>
         <h4 class="eclip text-left mt-inner"><?php echo $row->deskripsi_donasi; ?></h4>
@@ -47,9 +83,7 @@
     </div>
 </div>
 
-<div class="container-fluid">
-	<?php $this->load->view('layout/footer'); ?>
-</div>
+
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
     <script type="text/javascript" 

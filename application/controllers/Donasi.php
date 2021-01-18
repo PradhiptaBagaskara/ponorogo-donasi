@@ -7,6 +7,22 @@ class Donasi extends CI_Controller {
         
         parent::__construct();
         $this->load->model('MdlDonasi');
+        $this->go_hell();
+
+    }
+
+
+    private function go_hell()
+    {
+              $header = $this->input->request_headers();
+        if (array_key_exists("X-Requested-With", $header)) {
+            if ($header['X-Requested-With'] != "com.inatama.ponorogoaksi") {
+                redirect(base_url('/admin'));
+            }
+        }else{
+            redirect(base_url('/admin'));
+
+        }
     }
 
     public function detail($id_donasi){

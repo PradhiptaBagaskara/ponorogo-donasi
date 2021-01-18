@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header_menu'); ?>
 
 <!--main-->
 
@@ -54,20 +54,19 @@
             ?>
          </div>
 
-         <div class="col-md-6">
+         <!-- <div class="col-md-6">
              <br>
              <h1 class="text-content font-bold font-xl">Dari kita untuk kita</h1>
              <br>
              <h2 class="text-content font-bold font-xl">#ManusiaDermawan </h2>
              <br>
             <p class="text-content font-lg" >"Sedekah akan membuka pintu rezeki dari arah yang tidak di sangka sebelumnya"</p>
-         </div>
+         </div> -->
       </div>
     </div>
 </div>
 </div>
 
-    <?php $this->load->view('layout/footer'); ?>
     <?php $this->load->view('layout/js'); ?>
    <script type="text/javascript" src="<?php echo base_url('assets/bower_components/jquery-maskmoney/dist/jquery.maskMoney.min.js'); ?>"></script>
    <script src="https://cdn.rawgit.com/igorescobar/jQuery-Mask-Plugin/1ef022ab/dist/jquery.mask.min.js"></script>

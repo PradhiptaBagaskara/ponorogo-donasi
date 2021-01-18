@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<?php $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header_menu'); ?>
 
 <!--main-->
 <div class="container-fluid-full">
@@ -18,9 +18,7 @@
 <br><br><br><br>
 <div class="row">
   <div class="col-md-12">    
-		<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-    <!-- Indicators -->
+	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
        <ol class="carousel-indicators">
         <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
         <li data-target="#carousel-example-generic" data-slide-to="1"></li>
@@ -29,33 +27,31 @@
         <li data-target="#carousel-example-generic" data-slide-to="4"></li>
 				<li data-target="#carousel-example-generic" data-slide-to="5"></li>
        </ol>
-
-           <div id="row bg-img" id="rentyour">
-           <!-- Wrapper for slides -->
-              <div class="carousel-inner">
-                 <div class="item active">
-									<img src="<?php echo base_url('assets/front/images/slider/1.jpg') ?>" alt="0"> 
-						     </div>
-							<div class="item">
-								<img src="<?php echo base_url('assets/front/images/slider/2.jpg') ?>" alt="1">							
-							</div>
-							<div class="item">
-								<img src="<?php echo base_url('assets/front/images/slider/3.jpg') ?>" alt="2">
-							</div>
-							<div class="item">
-								<img src="<?php echo base_url('assets/front/images/slider/4.jpg') ?>" alt="3">
-							</div>
-							<div class="item">
-								<img src="<?php echo base_url('assets/front/images/slider/5.jpg') ?>" alt="4">
-							</div>
-							<div class="item">
-								<img src="<?php echo base_url('assets/front/images/slider/6.jpg') ?>" alt="5">
-							</div>
-            </div>
-          </div>
-        </div>
-      </div>
+		<div id="row bg-img" id="rentyour">
+					<div class="carousel-inner">
+						<div class="item active">
+						<img src="<?php echo base_url('assets/front/images/slider/1.jpg') ?>" alt="0"> 
+					</div>
+					<div class="item">
+						<img src="<?php echo base_url('assets/front/images/slider/2.jpg') ?>" alt="1">							
+					</div>
+					<div class="item">
+						<img src="<?php echo base_url('assets/front/images/slider/3.jpg') ?>" alt="2">
+					</div>
+					<div class="item">
+						<img src="<?php echo base_url('assets/front/images/slider/4.jpg') ?>" alt="3">
+					</div>
+					<div class="item">
+						<img src="<?php echo base_url('assets/front/images/slider/5.jpg') ?>" alt="4">
+					</div>
+					<div class="item">
+						<img src="<?php echo base_url('assets/front/images/slider/6.jpg') ?>" alt="5">
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
+</div>
 	<!--end slider-->
 	
 	<br><br>
@@ -68,7 +64,7 @@
 				
 			</div>
 
-		<div class="dropdown col-md-12" style="margin-bottom: 16px;">
+		<!-- <div class="dropdown col-md-12" style="margin-bottom: 16px;">
 			<button class="btn btn-success dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
 				sorting
 				<span class="caret"></span>
@@ -78,7 +74,7 @@
 				<li><a href="<?php echo base_url('home/ascending') ?>">A-Z</a></li>
 				<li><a href="<?php echo base_url('home/descending') ?>">Z-A</a></li>
 			</ul>
-		</div>
+		</div> -->
 
 			<?php
 				foreach($donasi as $row) {
@@ -111,23 +107,20 @@
 		</div>
 	</div>
 
-	<div class="row bg-img" id="rentyour">
+	<!-- <div class="row bg-img" id="rentyour">
 		<div class="section font-white">
 			<div class="col-md-12 text-center">
 				<h2 class="font-lg font-bold ">Tentang Kami</h2><br>
 				<div class="col-md-12">
-				<!-- <p class="font-md font-medium">Ponorogo Aksi (LMI) adalah lembaga filantropi profesional yang berkhidmat mengangkat harkat martabat masyarakat dhuafa (masyarakat kurang mampu) melalui penghimpunan dana ZISWAF (zakat, infaq, sedekah, dan wakaf) masyarakat dan dana corporate sosial responsibilty perusahaan.</p> -->
 				<p class="font-md font-medium"><?=$about->value?></p>
 				</div>
-				<!-- <div class="col-md-6">
-				<p class="font-md font-medium">Program-program sosial dan pemberdayaan masyarakat tidak mampu yang digulirkan telah menjadikan dana masyarakat yang dihimpun LMI memiliki nilai tambah dan manfaat yang berlipat ganda bagi masyarakat kurang mampu. Karena LMI berusaha senantiasa menumbuhkan iklim transparansi dan profesionalitas untuk mengawal amanah masyarakat yang demikian besar. </p>
-				</div> -->
+			
 				<br>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	
-	<div class="container-fluid" id="subscribe">
+	<!-- <div class="container-fluid" id="subscribe">
 		<div class="section section-p">
 			<div class="section-c">
 				<h3>Partner Bank</h3>
@@ -151,9 +144,8 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 
-	<?php $this->load->view('layout/footer'); ?>
 
 </div>
 

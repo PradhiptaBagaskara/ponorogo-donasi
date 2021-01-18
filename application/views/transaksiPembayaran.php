@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<?php $this->load->view('layout/header'); ?>
+<?php $this->load->view('layout/header_menu'); ?>
 
 <div class="back-banner box-shadow-bt">
     <div class="title-all">
@@ -19,8 +19,9 @@
     <div class="section" style="margin-bottom: 8%;">
         <div class="mt-inner">
             <div>
+            <br>
                 <div class="alert alert-info" role="alert">
-                    <a>Terima kasih atas donasinya <b>Ponorogo Aksi</b></a> 
+                    <a>Terima kasih telah melakukan donasi melalui <b>Ponorogo Aksi</b></a> 
                 </div>
                 <div class="row">
                     <div class="col-md-7">
@@ -67,7 +68,6 @@
         </div>
     </div>
     
-	<?php $this->load->view('layout/footer'); ?>
 	
 </div>
 
