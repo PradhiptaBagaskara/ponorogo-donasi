@@ -23,14 +23,16 @@
                     <li><a href="<?php echo base_url('admin/Transaksi'); ?>"><i class="fa fa-angle-right"></i> Data Transaksi</a></li>
                 </ul>
             </li>
-            <li class="treeview"> <a href="#"><i class="fa fa-globe"></i> <span>Feedback</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
+            <!-- <li class="treeview"> <a href="#"><i class="fa fa-globe"></i> <span>Feedback</span> <span class="pull-right-container"> <i class="fa fa-angle-left pull-right"></i> </span> </a>
                 <ul class="treeview-menu">
                     <li><a href="<?php echo base_url('admin/Feedback'); ?>"><i class="fa fa-angle-right"></i> Data Feedback</a></li>
                    
                 </ul>
-            </li>
+            </li> -->
             <li><a href="<?php echo base_url('admin/laporan'); ?>"><i class="fa fa-file"></i> Laporan</a></li>
             <li><a href="<?php echo base_url('admin/settings'); ?>"><i class="fa fa-gear"></i> Settings</a></li>
+            <li><a href="<?php echo base_url('admin/login/logout'); ?>"><i class="fa fa-power-off"></i> Logout</a></li>
+           
             </li>
         </ul>
     </section>

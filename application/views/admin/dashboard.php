@@ -15,7 +15,7 @@
         <section class="content-header">
           <h1>Dashboard</h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-home"></i> Beranda</a></li
+            <li><a href="#"><i class="fa fa-home"></i> Beranda</a></li>
           </ol>
         </section>
 
@@ -57,7 +57,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-lg-3 col-xs-6">
+            <!-- <div class="col-lg-3 col-xs-6">
               <div class="media-box bg-sea">
                 <div class="media-icon pull-left"><i class="icon-globe"></i> </div>
                 <div class="media-info">
@@ -67,7 +67,7 @@
                   </h3>
                 </div>
               </div>
-            </div>
+            </div> -->
           
         </section>
     </div> 
